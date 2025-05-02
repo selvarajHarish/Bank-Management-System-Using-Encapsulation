@@ -1,6 +1,5 @@
-##Bank Management System Using Encapsulation
+## Bank Management System Using Encapsulation
 ## Implementation Steps
-
 ### Step 1: Create the Project Structure
 - Set up a Java project and create a package named `encapsulation`.
 - Inside the package, create three classes:
