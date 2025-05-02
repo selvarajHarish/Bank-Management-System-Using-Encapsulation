@@ -1,5 +1,4 @@
-##Bank Management System Using Encapsulation##
-
+##Bank Management System Using Encapsulation
 ## Implementation Steps
 
 ### Step 1: Create the Project Structure
