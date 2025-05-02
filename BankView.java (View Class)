@@ -1,0 +1,56 @@
+package encapsulation;
+
+public class BankView {
+    public static void main(String[] args) {
+        boolean check = true;
+        while (check) {
+            System.out.println("\n1. Register \n2. Login \n3. Exit");
+            int ch = BankController.sc.nextInt();
+            switch (ch) {
+                case 1:
+                    BankController.register();
+                    break;
+                case 2:
+                    if (BankController.isLoginSuccess()) {
+                        System.out.println("Welcome to HDFC Bank!");
+                        boolean logout = true;
+                        while (logout) {
+                            System.out.println("\n1. Open Account \n2. Passbook \n3. Check Balance \n4. Deposit " +
+                                    "\n5. Money Transfer \n6. Change PIN \n7. Logout");
+                            ch = BankController.sc.nextInt();
+                            switch (ch) {
+                                case 1:
+                                    BankController.openAccount();
+                                    break;
+                                case 2:
+                                    BankController.passBook();
+                                    break;
+                                case 3:
+                                    BankController.checkBalance();
+                                    break;
+                                case 4:
+                                    BankController.deposit();
+                                    break;
+                                case 5:
+                                    BankController.moneyTransfer();
+                                    break;
+                                case 6:
+                                    BankController.changePin();
+                                    break;
+                                case 7:
+                                    logout = false;
+                                    System.out.println("Logout Successful!");
+                                    break;
+                            }
+                        }
+                    } else {
+                        System.out.println("Invalid Credentials!");
+                    }
+                    break;
+                case 3:
+                    check = false;
+                    System.out.println("Thank You for Using HDFC Bank!");
+            }
+        }
+    }
+}
